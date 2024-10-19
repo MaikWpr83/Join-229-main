@@ -1,0 +1,66 @@
+.legalNoticeContent {
+    margin: 0 24px 96px 16px;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F6F7F8;
+}
+
+.linkJoin {
+    text-decoration: none;
+    color: #43B5E4;
+}
+
+.headSection {
+    margin-bottom: 32px;
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrowLeft {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.headline {
+    font-size: 47px;
+    font-weight: 700;
+}
+
+.subheader {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+.subSubheader {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.imprintItems {
+    margin-left: 24px;
+}
+
+.secondPart {
+    margin-top: 16px;
+}
+
+.mainContainer {
+    height: calc(100vh - 80px);
+    overflow: auto;
+}
+
+@media (min-width: 1100px) {
+    .mainContainer {
+        padding-left: 96px;
+        padding-right: 98px;
+        padding-bottom: 16px;
+    }
+}

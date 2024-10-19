@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-inter);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+}
+
+:root {
+  --font-family-inter: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: inter;
+  src: url(/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 24px;
+  background-color: #a8a8a8;
+}
+
+.headerProfileIcon {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #2a3647;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.headerProfileIcon:hover {
+  background-color: #0c2e621f;
+}
+
+.headerProfileIcon span {
+  color: #29abe2;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 16px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  z-index: 900;
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 0 16px;
+  background-color: #2a3647;
+  color: #cdcdcd;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 101;
+}
+
+.menuMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 0;
+  border-radius: 8px;
+  gap: 4px;
+  height: 76px;
+  width: 76px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #cdcdcd;
+}
+
+.menuMobile p {
+  font-size: 14px;
+}
+
+.menuMobile:hover {
+  background-color: #091931;
+}
+
+.menuMobile:hover p {
+  color: #ffffff;
+}
+
+.menuMobile:hover #summaryMobileIcon {
+  content: url("/img/Mobile/generalElements/summaryIconWhite.png");
+}
+
+.menuMobile:hover #addTaskMobileIcon {
+  content: url("/img/Mobile/generalElements/addTaskIconWhite.png");
+}
+
+.menuMobile:hover #boardMobileIcon {
+  content: url("/img/Mobile/generalElements/boardIconWhite.png");
+}
+
+.menuMobile:hover #contactsMobileIcon {
+  content: url("/img/Mobile/generalElements/contactsIconWhite.png");
+}
+
+.logoutContainer {
+  display: none;
+  flex-direction: column;
+  background-color: #2a3647;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 20px 0 20px 20px;
+  width: fit-content;
+  position: absolute;
+  top: 70px;
+  right: 8px;
+  z-index: 10;
+}
+
+.logoutContainer a {
+  color: #cdcdcd;
+  font-size: 16px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.logoutContainer a:hover {
+  background-color: #2a3d59;
+}
+
+.primaryBtn {
+  background-color: #2a3647;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  gap: 10px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.primaryBtn:active {
+  background-color: #29abe2;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.secondaryBtn {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  gap: 10px;
+  color: #2a3647;
+  border: 1px solid #2a3647;
+  cursor: pointer;
+}
+
+.secondaryBtn:active,
+.secondaryBtn:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-color: #29abe2;
+  color: #29abe2;
+}
+
+.arrowBack:active {
+  border-radius: 100%;
+  background-color: #29abe2;
+}
+
+.arrowBack:hover {
+  background-color: #0c2e621f;
+  border-radius: 100%;
+}
+
+.active {
+  background-color: #091931;
+}
+
+.headerDesktopText {
+  font-size: 20px;
+  padding-left: 100px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: none;
+}
+
+.headerMobileLogo {
+  display: block;
+}
+
+.helpIcon {
+  display: none;
+  cursor: pointer;
+}
+
+@media (min-width: 1100px) {
+  .headerDesktopText {
+    display: block;
+  }
+
+  .headerMobileLogo {
+    display: none;
+  }
+
+  .headerProfileMenu {
+    width: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .helpIcon {
+    display: block;
+  }
+
+  .helpIcon:hover {
+    content: url("/img/Desktop/header/helpIconBig.png");
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.slideOutRight {
+  animation: slideOutRight 300ms ease-out 0s 1 normal forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {
+  animation: slideInRight 0ms ease-out 0s 1 normal forwards; /* slide in mit mehr als 0ms erzeugt den fehler auf mobile  */
+}
+
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slideInBottom {
+  animation: slideInBottom 300ms ease-out 0s 1 normal forwards;
+}
+
+@keyframes slideOutBottom {
+  0% {
+    transform: translateY(-80px);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.slideOutBottom {
+  animation: slideOutBottom 300ms ease-out 0s 1 normal forwards;
+}
+
+.taskSlideIn {
+  animation: taskSlideIn 500ms ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes taskSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

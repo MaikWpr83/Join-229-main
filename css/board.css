@@ -1,0 +1,1193 @@
+.headline {
+  font-weight: 700;
+  font-size: 47px;
+}
+
+body {
+  background-color: #F6F7F8;
+  overflow: hidden;
+}
+
+.backgroundOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 901;
+}
+
+.headerBoardDesktop {
+  display: none !important;
+}
+
+.headlineContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.headlineContainer img {
+  cursor: pointer;
+}
+
+.headlineContainer img:active {
+  content: url(/img/Mobile/Board/plusAddTaskMobileBlue.png);
+}
+
+main {
+  padding: 0 16px;
+  height: calc(100vh - 160px);
+  overflow: auto;
+  padding-bottom: 24px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 10px;
+  padding: 8px 16px;
+  gap: 10px;
+  background-color: #fff;
+}
+
+.searchContainer input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.searchContainer img {
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.searchContainer img:active {
+  content: url(/img/Mobile/Board/searchBlue.png);
+}
+
+.inputActive {
+  border-color: #29abe2;
+}
+
+.seperator {
+  border-left: 1px solid #a8a8a8;
+  height: 31px;
+}
+
+.searchContainer img:hover {
+  background-color: #d1d1d1;
+}
+
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 24px;
+}
+
+.taskSubContainerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskSubContainerHeader img {
+  cursor: pointer;
+}
+
+.taskSubContainerHeader img:active {
+  content: url(/img/Mobile/Board/plusButtonMobileBlue.png);
+}
+
+.subHeadline {
+  font-weight: 700;
+  font-size: 27px;
+  color: #2a3647;
+}
+
+.noTasks {
+  border: 1px dotted #a8a8a8;
+  border-radius: 10px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+  background-color: #e7e7e7;
+  display: flex;
+  justify-content: center;
+  color: #a8a8a8;
+  padding: 16px;
+  width: 100%;
+}
+
+.taskSubContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.taskCard {
+  padding: 16px;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.08);
+  width: 228px;
+  min-width: 228px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 8px 16px;
+  cursor: pointer;   
+  position: relative;
+}
+
+.taskCard:hover {
+  transform: rotate(5deg);
+  transition: 0.3s;
+}
+
+.taskCardMain {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.taskCardCategoryImg img {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+.taskCardCategoryImg img:hover {
+  border-radius: 100%;
+  background-color: #d1d1d1;  
+}
+.moveToHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  
+}
+
+.moveToHeader img{
+  cursor: pointer;
+  height: 24px;
+  filter: invert(1);
+}
+
+.menuMoveTo{
+  background-color: #2a3647;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 20px 0 20px 20px;
+  width: fit-content;
+  padding:  8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ffffff;
+  margin: 8px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2a3647;
+  color: #cdcdcd;
+}
+
+.menuMoveToContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menuMoveToItem{
+  padding: 4px 8px;
+  cursor: pointer;  
+  color: #cdcdcd;
+  font-size: 14px;
+}
+
+.menuMoveToItem:hover{
+  background-color: #2a3d59;
+  color: #ffffff;
+}
+
+.menuMoveToItem:active{
+  background-color: #2a3d59;
+  color: #ffffff;
+}
+
+
+.taskCardCategory {
+  background-color: #0038ff;
+  color: white;
+  padding: 4px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: fit-content;
+}
+
+.taskCardTitleDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.taskCardTitle {
+  font-weight: 700;
+  color: #2a3647;
+}
+
+.taskCardDescription {
+  color: #a8a8a8;
+  word-wrap: break-word;
+  height: 50px;
+  overflow: auto;
+  
+}
+
+.taskCardOverviewDescription {
+  word-wrap: break-word;
+}
+
+.subtaskText {
+  font-size: 12px;
+}
+
+.taskCardSubtaskContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subtaskProgressbar {
+  height: 8px;
+  width: 128px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.subtaskProgressbarFill {
+  background-color: #4589ff;
+  height: 8px;
+  border-radius: 16px;
+  width: 10%;
+}
+
+.taskCardAssingedPrio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: -9px;
+}
+
+.taskCardAssigned {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 8px;
+  max-width: 140px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding-left: 8px;
+}
+
+.taskCardPriority {
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.taskCardProfileIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  padding: 8px;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  margin-left: -8px;
+  border: 1px solid white;
+}
+
+.taskCardContainer {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+.taskCardOverviewMain {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.taskCardOverviewBody {
+  max-width: 525px;
+  min-width: 280px;
+  max-height: 90vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  margin: 16px;
+  background-color: white;
+  z-index: 902;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+  position: relative;
+  animation: slideIn 400ms both;
+}
+
+.closing {
+  animation: slideOut 500ms forwards !important;
+}
+
+.taskCardOverviewCategoryCloseContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskCardOverviewCategoryCloseContainer img {
+  cursor: pointer;
+  position: absolute;
+  right: 24px;
+  top: 32px;
+}
+
+.taskCardOverviewCategory {
+  padding: 4px 16px;
+  border-radius: 8px;
+  background-color: #0038ff;
+  color: white;
+}
+
+.taskCardOverviewTitle {
+  font-weight: 700;
+  font-size: 36px;
+  color: #000000;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.taskCardOverviewLabelContainer {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.priorityLabel {
+  margin-left: 15px
+}
+
+.taskCardOverviewLabel {
+  color: #42526e;
+}
+
+.taskCardOverviewAssignedContainer {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.taskCardOverviewAssigneds {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.taskCardOverviewContact {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 7px 16px;
+}
+
+.taskCardOverviewProfileIcon {
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #0038ff;
+  color: white;
+  border: 2px solid white;
+  font-size: 12px;
+}
+
+.taskCardOverviewSubtaskContainer {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.taskCardOverviewSubtasks {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.taskCardOverviewSubtask {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 6px 16px;
+  cursor: pointer;
+}
+
+.taskCardOverviewSubtask input {
+  appearance: none;
+  background-image: url(/img/Mobile/Board/checkboxGrey24.png);
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.taskCardOverviewSubtask input:checked {
+  appearance: none;
+  background-image: url(/img/Mobile/Board/checkboxChecked24.png);
+  height: 24px;
+  width: 24px;
+}
+
+.subtaskItemInTask {
+  cursor: pointer;
+}
+
+.taskCardOverviewBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.taskCardOverviewBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  color: #2a3647;
+  cursor: pointer;
+}
+
+#taskCardOverviewEditBtn {
+  width: 80px;
+}
+
+#taskCardOverviewDeleteBtn {
+  width: 80px;
+}
+
+.taskCardOverviewSeperator {
+  height: 24px;
+  border-left: 1px solid #d1d1d1;
+}
+
+.taskCardEditBody {
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 30px;
+  background-color: #ffffff;
+  padding: 32px 24px;
+  max-height: 700px;        /* deswegen konnte man im board edit auf mobile nicht scrollen geht jetzt wieder */
+  scrollbar-width: none;
+  overflow: scroll;
+  width: 100%;
+  max-width: 525px;
+  min-width: 280px;
+  margin: 0 16px;
+  max-height: 90vh;
+  z-index: 902;
+}
+
+.closeBtnContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.closeBtnContainer img {
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.editTaskForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.labelInputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.inputText {
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 10px 21px;
+}
+
+.inputTextarea {
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+  padding: 18px 21px;
+  height: 88px;
+  resize: none;
+}
+
+.inputDate {
+  background-image: url(/img/Mobile/AddTask/calendarIcon.png);
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+.inputDate::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+.prioRadioContainer {
+  display: flex;
+  gap: 16px;
+  padding: 0 2px;
+}
+
+.prioLabelImg {
+  padding: 18px 10px;
+  border-radius: 10px;
+  height: 41px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  width: 104px;
+  justify-content: center;
+  gap: 8px;
+}
+
+.inputMedium:checked + #labelMedium {
+  background-color: #ffa800;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.inputMedium:checked + #labelMedium img {
+  content: url(/img/Mobile/AddTask/hoverMediumIconAddTask.png);
+}
+
+.inputUrgent:checked + #labelUrgent {
+  background-color: #ff3d00;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.inputUrgent:checked + #labelUrgent img {
+  content: url(/img/Mobile/AddTask/hoverUrgentIconAddTask.png);
+}
+
+.inputLow:checked + #labelLow {
+  background-color: #7ae229;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.inputLow:checked + #labelLow img {
+  content: url(/img/Mobile/AddTask/hoverLowIconAddTask.png);
+}
+
+.inputImgContainer {
+  position: relative;
+  border: 1px solid #d1d1d1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.inputImgContainer:has(input:focus) {
+  border-color: #29abe2;
+  outline: none;
+}
+
+.inputImgContainer input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.inputImgContainer img {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.inputImgContainer img:active {
+  background-color: #d1d1d1;
+}
+
+.inputImgContainer img:hover {
+  background-color: #d1d1d1;
+}
+
+#profileIconAssingedContainer{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.profileIcon{
+  min-height: 42px;
+  min-width: 42px;
+  border-radius: 100%;
+  border: 2px solid #ffffff;
+  background-color: #ff8190;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.subtaskItem{
+  padding: 4px 16px 4px 0;
+  position: relative;
+  margin-left: 36px;
+  margin-bottom: 4px;
+}
+
+.subtaskItemIconContainer {
+  position: absolute;
+  right: 16px;
+  top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.subtaskSeperator{
+  border-left: 1px solid #a8a8a8;
+  height: 24px;
+}
+
+.subtaskItemInput {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  max-width: 330px;
+}
+
+.subtaskItemIcon {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  border-radius: 100%;
+}
+
+.subtaskItemIcon:active, .subtaskItemIcon:hover {
+  background-color: #d1d1d1;
+}
+
+.subtaskList {
+  overflow: scroll;
+  max-height: 100px;
+}
+
+.subtaskList::-webkit-scrollbar-corner {
+  background-color: #F6F7F8;
+}
+
+.taskCardEditBtn{
+  padding: 18px 10px;
+  gap: 4px;
+  font-size: 21px;
+  font-weight: 700;
+  transition: ease-in-out 100ms;
+}
+
+.taskCardEditBtnContainer{
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.customDropdownBox {
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.16);
+  padding-top: 8px;
+  margin-top: -16px;
+  max-height: 200px;
+  overflow: auto;
+  position: absolute;
+  top: 74px;
+  width: 100%;
+  z-index: 99;
+}
+
+.editTaskDropdownBox {
+  position: relative !important;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.addTaskCategoryContainer {
+  z-index: 100;
+}
+
+.addTaskLabel {
+  position: relative;
+}
+
+.customDropdownCategory {
+  height: auto;
+}
+
+.assignedItem{
+  padding: 7px 16px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.assignedIconNameContainer{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.assignedCheckbox{
+  appearance: none;
+  background-image: url(/img/Mobile/Board/checkboxGrey24.png);
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.assignedCheckbox:checked{
+  appearance: none;
+  background-image: url(/img/Mobile/Board/checkboxChecked24.png);
+  height: 24px;
+  width: 24px;
+}
+
+.show{
+  display: flex !important;
+}
+
+.nameWhite {
+  color: #ffffff;
+}
+
+.assignedItemChecked{
+  background-color: #2A3647;
+  color: #ffffff;
+}
+
+#subtaskEditInputIconContainer{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.successfullyMessage{
+  background-color: #2A3647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  padding: 20px 25px;
+  gap: 20px;
+}
+
+.nothingFound {
+  display: none;
+  padding-left: 8px;
+  padding-top: 8px;
+  color: red;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.d-block {
+display: block;
+}
+
+@media (min-width: 1100px) {
+  main {
+    height: calc(100vh - 95px);
+    max-width: 1145px;
+    scrollbar-width: none;
+  }
+
+  #movoToMenuImg{
+    display: none;
+  }
+
+  .headerBoardMobile {
+    display: none;
+  }
+
+  .headerBoardDesktop {
+    height: 208px;
+    width: 1140px;
+    display: flex !important;
+    position: sticky;
+    top: 0;
+    background-color: #F6F7F8;
+    z-index: 99;
+    padding-top: 48px !important;
+  }
+
+  .searchAndAddTask {
+    display: flex;
+    gap: 32px;
+  }
+
+  .searchContainer {
+    margin-top: 0;
+  }
+
+  .addTaskOnBoard {
+    width: 160px;
+    height: 56px;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 700;
+    transition: ease-in-out 100ms;
+    background-color: #2A3647;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .headlineContainer {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .addTaskBtn:active {
+    content: url("/img/Desktop/board/addTaskOnBoardDesktopActive.png");
+  }
+
+  .subHeadline {
+    font-size: 20px;
+    color: #42526E;
+  }
+
+  .createTaskBtn {
+    transition: ease-in-out 100ms;
+  }
+
+  .addTaskClearBtn {
+    transition: ease-in-out 100ms;
+  }
+
+  .taskCardOverviewTitle{
+    font-size: 61px;
+  }
+
+  .addTaskOnBoard:hover, .taskCardEditBtn:hover, .createTaskBtn:hover {
+    background-color: #29abe2;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .fsize20 {
+    font-size: 20px;
+  }
+
+  .fzise19 {
+    font-size: 19px;
+  }
+
+  .profileIcon42 {
+    height: 45px;
+    width: 45px;
+    font-size: 16px;
+  }
+  
+  .imgWidth24 {
+    width: 21px;
+    height: 15px;
+    
+  }
+  .addTaskOnBoard:active, .taskCardEditBtn:active {
+    background-color: #091931;
+  }
+
+  .floatingAddTask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #forAnimationFloating {
+    animation: slideIn 400ms forwards;
+  }
+
+  .addTaskBoardDesktop {
+    width: 100%;
+    max-width: 1116px;
+    height: 791px;
+    background-color: #fff;
+    z-index: 902;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 64px 74px;
+    position: relative;
+  }
+
+  .headerAddTaskOnBoard {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 32px;
+  }
+
+  .closeButtonAddTask {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  .addTaskForm {
+    padding: 0 !important;
+  }
+
+  .taskCardOverviewBtn:hover {
+    font-weight: 700;
+    color: #29abe2;
+  }
+
+  #taskCardOverviewEditBtn:hover img {
+    content: url(/img/Mobile/Board/editBlue24.png);
+  }
+  
+  #taskCardOverviewDeleteBtn:hover img {
+    content: url(/img/Mobile/Board/deleteBlue24.png);
+  }
+
+  .taskCardOverviewMain {
+    gap: 24px;
+  }
+
+  .taskCardOverviewBody {
+    padding: 48px 40px;
+    width: 525px;
+    max-height: calc(100vh - 100px);
+    gap: 24px;
+    overflow-y: scroll;
+  }
+
+  .fsize23{
+    font-size: 23px;
+  }
+
+  .px4y24 {
+    padding: 4px 24px;
+  }
+
+  .taskCardEditBody {
+    width: 525px;
+    padding: 48px 40px;
+    max-height: calc(100vh - 100px);
+  }
+
+  .editTaskForm {
+    gap: 24px;
+  }
+
+  .closeTaskBtnEditTask:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+  }
+}
+
+@media (min-width: 1425px) {
+  main {
+    margin-left: 48px;
+  }
+
+  .addIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .tasksContainer {
+    flex-direction: row;
+    gap: 35px;
+    overflow: hidden;
+    height: calc(100vh - 328px - 24px);
+  }
+
+  .taskCardContainer {
+    flex-direction: column;
+    width: 252px;
+    padding-bottom: 400px;
+  }
+
+  .addTaskDesktopIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .addTaskDesktopIcon:hover {
+    content: url("/img/Mobile/Board/plusButtonMobileBlue.png");
+  }
+
+  .taskCardContainer {
+    overflow-x: hidden;
+    scrollbar-width: none;
+  }
+
+  .taskSubContainer{
+    height: calc(100vh - 212px);
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .taskCardOverviewBtn:active {
+    font-weight: 700;
+    color: #29abe2;
+  }
+
+  #taskCardOverviewEditBtn:active img {
+    content: url(/img/Mobile/Board/editBlue24.png);
+  }
+  
+  #taskCardOverviewDeleteBtn:active img {
+    content: url(/img/Mobile/Board/deleteBlue24.png);
+  }
+}
+
+@media (max-width: 430px) {
+  .prioRadioContainer {
+    justify-content: space-around;
+  }
+
+  .editTextPrio {
+    display: none;
+  }
+
+  .prioLabelImg {
+    width: 66px;
+  }
+}
+
+@media (max-width: 470px) {
+  .subtaskItemInput {
+    width: 70%;
+  }
+}
+
+@media (max-width: 420px) {
+  .taskCardOverviewSubtask {
+    gap: 0;
+  }
+
+  .subtaskItemInTask {
+    margin-left: 12px;
+  }
+
+  .taskCardOverviewSubtask input:checked {
+    padding: 12px;
+  }
+
+  .taskCardOverviewSubtask input {
+    padding: 12px;
+  }
+}
+
+/* Animationen */
+
+/* @keyframes slideIn {
+  from {
+    transform: translateX(100vw);
+  }
+  
+  to {
+    transform: translateX(0);
+  }
+} */
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}

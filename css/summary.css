@@ -1,0 +1,548 @@
+body {
+  background-color: #f6f7f8;
+  overflow: hidden;
+}
+
+.greetingScreen {
+  display: none;
+}
+
+.headerMenu {
+  background-color: #ffffff;
+}
+
+.mainContainer {
+  max-width: 1440px;
+}
+
+.headlineContainer {
+  margin: 110px 0 0 96px;
+  max-width: 625px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 6px;
+}
+
+.summaryMainContent {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  height: 73px;
+  width: 264px;
+  font-size: 61px;
+  font-weight: 700;
+  letter-spacing: -2.5px;
+  color: #000000;
+  gap: 1px;
+  margin: 0;
+}
+
+.blueLine {
+  margin: 0 30px;
+  background-color: #29abe2;
+  min-width: 3px;
+  height: 59px;
+  border-radius: 3px;
+  margin-top: 7px;
+}
+
+.textHeadline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  line-height: 32.4px;
+  letter-spacing: -0.2px;
+}
+
+.blueLineResponsiveContainer {
+  display: none;
+}
+
+.mainContent {
+  margin-top: 56px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mainContentBox {
+  height: 562px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summaryToDoBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.aboveContentTodo {
+  height: 168px;
+  width: 264px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  margin-right: 8px;
+}
+
+.aboveContentTodo:hover div {
+  filter: invert(89%) sepia(89%) saturate(0%) hue-rotate(281deg)
+    brightness(111%) contrast(112%);
+}
+
+.summaryBoxContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.circle {
+  height: 69px;
+  width: 69px;
+  margin-right: 18px;
+  border-radius: 34.5px;
+  background-color: #2a3647;
+}
+
+.editIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editIcon {
+  height: 32px;
+  width: 32px;
+}
+
+.summaryNumberContent {
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.numberContent {
+  height: 77px;
+  font-size: 64px;
+  line-height: 77px;
+  font-weight: 600;
+}
+
+.nameBox {
+  height: 24px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.aboveContentDone {
+  height: 168px;
+  width: 264px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  margin-top: 0;
+}
+
+.aboveContentDone:hover div {
+  filter: invert(89%) sepia(89%) saturate(0%) hue-rotate(281deg)
+    brightness(111%) contrast(112%);
+}
+
+.middleBoxContent {
+  height: 168px;
+  padding: 0 65px;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+
+.middleBoxCircle {
+  background-color: #ff3d00;
+  height: 69px;
+  width: 69px;
+  margin-right: 18px;
+  border-radius: 34.5px;
+}
+
+.urgentIcon {
+  height: 25px;
+  width: 34px;
+}
+
+.textMiddleBoxContent {
+  font-size: 16px;
+  line-height: 19px;
+  color: #2a3647;
+}
+
+.middleBoxLine {
+  height: 102px;
+  width: 2px;
+  margin: 0 60px;
+  background-color: #d1d1d1;
+}
+
+.containerDateofdeadline {
+  height: 57px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: start;
+  padding: 7px;
+  border-radius: 7px;
+}
+
+#containerDeadLine {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dateofdeadline {
+  font-size: 21px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #2a3647;
+}
+
+.textDownContent {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #2a3647;
+  text-align: center;
+}
+
+.downContentTasksinboard,
+.downContentTasksinprogress,
+.downContentAwaitingfeedback {
+  height: 168px;
+  width: 168px;
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+
+.aboveContentTodo:hover,
+.aboveContentDone:hover,
+.middleBoxContent:hover,
+.downContentTasksinboard:hover,
+.downContentTasksinprogress:hover,
+.downContentAwaitingfeedback:hover {
+  background-color: #2a3647;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.aboveContentTodo:hover div,
+.aboveContentDone:hover div,
+.middleBoxContent:hover div,
+.downContentTasksinboard:hover div,
+.downContentTasksinprogress:hover div,
+.downContentAwaitingfeedback:hover div {
+  color: #ffffff;
+}
+
+.greetingBackground {
+  background-color: #f8f8f8;
+  position: absolute;
+  top: 90px;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greetingText {
+  font-size: 36px;
+  text-align: center;
+}
+
+#greetingName {
+  font-size: 47px;
+  font-weight: 700;
+  color: #29abe2;
+}
+
+@keyframes easeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation: easeOut 2s forwards;
+}
+
+@media screen and (max-width: 1100px) {
+  .mainContainer {
+    max-width: 396px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .headlineContainer {
+    display: block;
+    gap: 8px;
+    height: 88px;
+    margin: 50px 0 0 0;
+  }
+
+  h1 {
+    font-size: 47px;
+    margin: 0;
+  }
+
+  .blueLine {
+    display: none;
+  }
+
+  .textHeadline {
+    display: block;
+    font-size: 20px;
+  }
+
+  .blueLineResponsiveContainer {
+    display: flex;
+    max-width: 550px;
+    width: 80px;
+    justify-content: flex-start;
+  }
+
+  .blueLineResponsive {
+    display: flex;
+    background-color: #29abe2;
+    min-height: 3px;
+    width: 80px;
+    border-radius: 3px;
+    justify-content: flex-start;
+    margin-top: 10.8px;
+  }
+
+  .mainContent {
+    width: 100%;
+    height: 384px;
+    margin-left: 0;
+  }
+
+  .mainContentBox {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .summaryToDoBox {
+    width: 100%;
+  }
+
+  .aboveContentTodo {
+    width: 186px;
+    height: 110px;
+  }
+
+  .aboveContentDone {
+    width: 186px;
+    height: 110px;
+  }
+
+  .editIcons {
+    width: 100%;
+  }
+
+  .summaryBoxContent {
+    width: 100%;
+    padding: 0;
+    height: 110px;
+  }
+
+  .downContentAwaitingfeedback {
+    width: 116px;
+    height: 116px;
+  }
+
+  .downContentTasksinboard {
+    width: 116px;
+    height: 116px;
+  }
+
+  .downContentTasksinprogress {
+    width: 116px;
+    height: 116px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .numberContent {
+    height: 56px;
+    width: 23px;
+    font-size: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle {
+    min-width: 40px !important;
+    min-height: 40px !important;
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .editIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .nameBox {
+    width: 40px;
+    height: 17px;
+    font-size: 14px;
+  }
+
+  .textDownContent {
+    width: 54px;
+    height: 34px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  #deadlineDate {
+    font-size: 16px;
+  }
+
+  .textMiddleBoxContent {
+    font-size: 14px;
+  }
+
+  .middleBoxCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .urgentIcon {
+    width: 27.79px;
+    height: 16.74px;
+  }
+
+  .middleBoxLine {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .containerDateofdeadline {
+    height: 44px;
+  }
+
+  .fullopacity {
+    opacity: 1;
+  }
+
+  .noopacity {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .mainContent {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mainContainer {
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .aboveContentTodo {
+    width: 158px;
+    height: 99px;
+  }
+
+  .aboveContentDone {
+    width: 158px;
+    height: 99px;
+  }
+
+  .downContentAwaitingfeedback {
+    width: 104px;
+    height: 104px;
+  }
+
+  .downContentTasksinboard {
+    width: 104px;
+    height: 104px;
+  }
+
+  .downContentTasksinprogress {
+    width: 104px;
+    height: 104px;
+  }
+
+  .textMiddleBoxContent {
+    font-size: 12px;
+  }
+
+  .nameBox {
+    font-size: 12px;
+  }
+
+  .textDownContent {
+    line-height: normal;
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .summaryOverview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .headlineContainer {
+    max-width: 630px;
+  }
+
+  .mainContainer {
+    display: flex !important;
+  }
+
+  .greetingScreen {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+  }
+
+  .greetingText {
+    text-align: left;
+    font-size: 47px;
+  }
+
+  #greetingName {
+    font-size: 64px;
+  }
+
+  #greetingMain {
+    display: none;
+  }
+}

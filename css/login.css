@@ -1,0 +1,312 @@
+body {
+  background-color: #F6F7F8;
+}
+
+.errorMessage {
+  color: #ff8190;
+  font-size: 12px;
+  display: none;
+  margin: -20px 0;
+}
+
+.errorInput {
+  border: 1px solid #ff8190 !important;
+}
+
+.loginAnimation {
+  display: none;
+}
+
+.loginLogo {
+  margin-top: 38px;
+  margin-left: 37px;
+  margin-bottom: 50px;
+  width: 64px;
+  height: 78px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;  
+  margin-left: 16px;
+  margin-right: 16px;    
+  gap: 32px;
+  padding: 32px 16px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 0 14px 3px rgba(0, 0, 0, 0.04);
+}
+
+.loginLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 21px;
+  border: 1px solid #d1d1d1;
+  border-radius: 10px;
+}
+
+.loginLabel input {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  width: 100%;
+}
+
+.loginHeader {
+  font-size: 47px;
+  text-underline-offset: 16px;
+  text-align: center;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.headlineUnderline {
+  width: 88px;
+  border: 3px solid #29abe2;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.customCheckbox {
+  appearance: none;
+  background-image: url(/img/Mobile/LogIn/checkbox.png);
+  height: 24px;
+  width: 24px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.customCheckbox:checked {
+  background-image: url(/img/Mobile/LogIn/checkboxChecked.png);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.loginBtnContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 21px;
+}
+
+.primaryBtn{
+    padding: 4px 0;
+    height: 51px;
+    width: 180px;
+    font-weight: 700;
+}
+
+.primaryBtn:disabled, .primaryBtn:disabled:hover {
+  background-color: #091931;
+  opacity: 0.5;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.secondaryBtn{
+    padding: 4px 0;
+    height: 51px;
+    width: 180px;
+    font-weight: 700;    
+}
+
+.registerContainerDesktop {
+  display: none;
+}
+
+.registerContainerMobile {
+    display: flex;
+    align-items: center;
+    margin-top: 57px;
+    gap: 35px;
+    justify-content: center;
+}
+
+.registerContainerMobile p{
+    font-size: 20px;
+}
+
+.signUpBtn{
+    width: 104px;
+}
+
+.footerLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 42px;    
+}
+
+.footerLogin a{
+    color: #A8A8A8;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.footerLogin a:active{
+    color: #29abe2;
+    font-weight: 700;
+}
+
+@media (min-width: 1100px) {
+  body {
+    margin: 80px 80px 0 80px;
+    overflow: hidden;
+  }
+
+  .headerLogin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .loginLogo {
+    margin: 0;
+    height: 122px;
+    width: 100px;
+  }
+  
+  .loginForm {
+    width: 652px;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 63px;
+  }
+
+  .registerContainerDesktop {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    justify-content: center;
+  }
+
+  .registerContainerDesktop p {
+    font-size: 20px;
+  }
+  
+  .registerContainerMobile {
+    display: none;
+  }
+
+  .headlineUnderline {
+    width: 150px;
+  }
+
+  .loginHeader {
+    font-size: 67px;
+  }
+
+  .loginBtnContainer {
+    flex-direction: row;
+  }
+
+  .checkboxLabel {
+    padding: 0 39px;
+  }
+
+  .primaryBtn {
+    width: 110px;
+    height: 48px;
+    font-size: 21px;
+    font-weight: 700;
+    transition: ease-in-out 100ms;
+  }
+
+  .signUpBtn {
+    width: 91px;
+    padding: 15px 16px 15px 16px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .primaryBtn:hover, .signUpBtn:hover {
+    background-color: #29abe2;
+    color: fff;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .secondaryBtn {
+    width: 177px;
+    height: 48px;
+    font-size: 21px;
+    font-weight: 700;
+    transition: ease-in-out 100ms;
+  }
+
+  .footerLogin a {
+    width: 130px;
+  }
+
+  .footerLogin a:hover{
+    color: #29abe2;
+    font-weight: 700;
+  }
+
+  .loginAnimation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #F6F7F8;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    animation: fadeOutBackground 0.5s ease-in-out 0.9s forwards;
+  }
+
+  .animatedLogo {
+    position: absolute;
+    width: 274px;
+    height: 334px;
+    animation: moveToCorner 0.4s ease-in-out 0.5s forwards;
+    --webkit-animation-name: flash;
+  }
+}
+
+@keyframes moveToCorner {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 274px;
+    height: 334px;
+  }
+  100% {
+    top: 80px;
+    left: 80px;
+    transform: translate(0, 0);
+    width: 100px;
+    height: 122px;
+  }
+}
+
+@keyframes fadeOutBackground {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
